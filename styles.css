@@ -1,0 +1,172 @@
+*{
+margin: 0;                 
+padding: 0;            
+box-sizing: border-box;
+}
+
+body{
+background-color: rgb(154, 182, 209);
+}
+
+.navbar {
+    display: flex;               
+    justify-content: space-between; 
+    
+    align-items: center;         
+    background: #fdfdfd;         
+    border-radius: 20px;          
+    padding: 10px 20px;          
+    }
+
+
+h2{
+    display: flex;
+align-items: center;
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;  
+
+}
+
+img{
+width: 100px;
+    height: auto;
+}
+
+ul {
+    
+    list-style: none;            
+    display: flex;               
+    gap: 30px;        
+    color: #333;     
+    font-family: Georgia, 'Times New Roman', Times, serif;      
+}
+
+ul li a {
+    display: flex;
+    text-decoration: none;       
+    color: #333;                 
+    font-weight: bold;           
+          
+}
+
+.container {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    
+    
+    
+}
+
+.container img {
+    padding: 10px;
+    width: 700px;             
+    height: 500px;                
+    border-radius: 50px;         
+}
+
+.contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+
+    
+}
+
+
+.caja {
+     flex: 300px;
+    background: #000000;
+    border-radius: 10px;
+    overflow: hidden;       
+    }
+
+
+
+.img-caja {
+     display: flex;      
+    justify-content: center;     
+    align-items: center;       
+ 
+    
+}
+
+.img-caja img{    
+    width: 100%;
+    height: 250px;         
+     
+}
+
+
+.texto-caja {
+    padding: 20px;               
+}
+
+.texto-caja h3 {        
+    color: #fffafa;  
+    font-family: Georgia, 'Times New Roman', Times, serif;  ;          
+}
+
+.texto-caja p {
+    font-size: 0.9rem;           
+    color: #ccc;                 
+    font-family: Georgia, 'Times New Roman', Times, serif;        
+    
+}
+
+.texto-caja button {
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    margin-top: 25px;            
+    background: #ffffff;         
+    color: #fff;                 
+    border: none;                
+    padding: 5px 20px;          
+    border-radius: 20px;          
+    cursor: pointer;             
+    font-weight: bold;           
+    
+    
+}
+
+.texto-caja button a{
+    text-decoration: none;  
+    color: black;
+}
+
+
+
+.Contenedor2 {
+    display: flex;              
+    gap: 50px;                   
+    background: rgb(154, 182, 209);         
+    border-radius: 20px;          
+    padding: 20px;              
+    min-height: auto;          
+}
+
+
+.item-caja {
+    background: #334aca;         
+    color: #fff;                 
+    border-radius: 10px;          
+    padding: 20px;               
+    text-align: center;          
+    font-weight: bold;     
+    font-family: Georgia, 'Times New Roman', Times, serif;       
+    
+    
+}
+
+
+
+
+.cajas-contenedor2 {
+    justify-content: center;     }
+
+
+footer{
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+}
