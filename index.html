@@ -71,7 +71,7 @@ fieldset {
 }
 
 fieldset:hover {
-    border-color: #50588d;   /* preguntar a mia esto */
+    border-color: #50588d;   
 }
 
 legend {
@@ -91,7 +91,7 @@ label {
     display: block;          
     font-weight: 1000;       
     font-size: 15px;
-    color: #47435a;          /* preguntar a mia*/
+    color: #47435a;          
     margin-bottom: 0.5rem;   
     cursor: pointer;         
 }
@@ -105,10 +105,10 @@ select,
 textarea {
     width: 50%;                       
     padding: 0.4rem 0.5rem;           
-    border: solid #cbd5e1;         /* preguntar a mia */
+    border: solid #cbd5e1;         
     border-radius: 12px;              
     font-family: Georgia, 'Times New Roman', Times, serif;             
-    background: #ffffff;               /* preguntar a mia */
+    background: #ffffff;               
     
 }
 
@@ -120,13 +120,13 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
     border-color: #665eff;                      
-    background: rgb(223, 223, 223);                            /* preguntar las dos cosas */
+    background: rgb(223, 223, 223);                            
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #6b85aa60;      /* preguntar esto*/
-    font-style: Georgia, 'Times New Roman', Times, serif;  /* preguntar esto */
+    color: #6b85aa60;      
+    font-style: Georgia, 'Times New Roman', Times, serif;  
 }
 
 select {
@@ -141,7 +141,7 @@ input[type="checkbox"] {
     appearance: none;              
     width: 20px;
     height: 20px;
-    border: 1px solid #83a7ac;     /* preguntar mia */         
+    border: 1px solid #83a7ac;              
     vertical-align: middle;        
     cursor: pointer;               
 }
@@ -157,17 +157,17 @@ input[type="checkbox"] {
 
 
 input[type="radio"]:checked {
-    box-shadow: inset 0 0 0 4px #00ffaa;  /* preguntar a mia */
+    box-shadow: inset 0 0 0 4px #00ffaa;  
 }
 
 input[type="checkbox"]:checked {
-    border-color: #4f46e5; /* preguntar a mia */
+    border-color: #4f46e5; 
     background: #4f46e5;
 }
 
 input[type="radio"]:hover,
 input[type="checkbox"]:hover {
-    border-color: #4f46e5;   /* preguntar a mia */
+    border-color: #4f46e5;   
 }
 
 
@@ -184,13 +184,13 @@ fieldset > div > div label {
     cursor: pointer;
     padding: 0.4rem 0.75rem;      
     border-radius: 30px;         
-    background: #f1f5f9;          /* preguntar a mia */
+    background: #f1f5f9;          
 
 }
 
 
 fieldset > div > div label:has(input:checked) {
-    border-color: #4f46e5;         /* preguntar a mia */
+    border-color: #4f46e5;         
     color: #4f46e5;                
 }
 
@@ -210,11 +210,11 @@ button {
 
 button[type="submit"] {
     background: #01000f;           
-    color: red;                  /* preguntar a mia */
+    color: red;                  
 }
 
 button[type="submit"]:hover {
-    background: #ff0000;                              /* preguntar a mia */
+    background: #ff0000;                              
     transform: translateY(-4px);                      
 }
 
@@ -304,11 +304,11 @@ body > div {
 
 
 
-
     
 
 
     </style>
+
 </head>
 
 <body>
@@ -345,21 +345,25 @@ body > div {
 <div>
     <label for="DNI">DNI *</label>
     <input type="text" id="DNI" name="DNI" placeholder="Ej: 48503456 " required>
+    <span class="error" id="err-DNI"></span>
 </div>
 
 <div>
     <label for="Fecha de nacimiento">Fecha de nacimiento </label>
     <input type="date" id="Fecha de nacimiento" name="Fecha de nacimiento" placeholder="Ej: 18/5/96 " >
+    <span class="error" id="err-fechanacimiento"></span>
 </div>
 
 <div>
     <label for="Correo electrónico">Correo electrónico *</label>
     <input type="email" id="Correo electrónico" name="Correo electrónico" placeholder="Ej: xxxxxxx@gmail.com " required>
+    <span class="error" id="err-correo"></span>
 </div>
 
 <div>
     <label for="Número de teléfono">Número de teléfono</label>
     <input type="tel" id="Número de teléfono" name="Número de teléfono" placeholder="Ej: +5491123455077 " required>
+    <span class="error" id="err-telefono"></span>
 </div>
 
 </fieldset>
@@ -446,13 +450,18 @@ body > div {
                 <legend>Datos de Seguridad</legend>
 
                 <div>
-                    <label for="password">Contraseña *</label>
-                    <input type="password" id="password" name="password" placeholder="Minimo de  8 caracteres" minlength="8" required>
+                    <label for="password" >Contraseña *</label>
+                    <input type="password"  id="password" name="password" placeholder="Minimo de  8 caracteres" minlength="8" required>
+                    <button type="button" class="toggle-pass" data-target="password">👁️</button>
+                    
+                    <span class="error" id="err-password"></span>
                 </div>
 
                 <div>
                     <label for="confirmPassword">Confirmar contraseña *</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repita su contraseña" minlength="8" required>
+                    <input type="password"  id="confirmPassword" name="confirmPassword" placeholder="Repita su contraseña" minlength="8" required>
+                    <button type="button" class="toggle-pass" data-target="confirmPassword">👁️</button>
+                    <span class="error" id="err-confirmPassword"></span>
                 </div>
 
                 <div>
@@ -464,7 +473,7 @@ body > div {
 
             
             <div>
-                <button type="submit"><a href="inicio.html">Enviar formulario</a></button>
+            <button type="submit" id="btn-enviar">Enviar formulario</button>
                 <button type="reset">Reiniciar formulario</button>
             </div>
         
@@ -474,6 +483,7 @@ body > div {
 
 </form>
 
+    <script src="script.js"></script>
 
 </body>
 </html>
